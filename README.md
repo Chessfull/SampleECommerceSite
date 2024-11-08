@@ -2,7 +2,7 @@
 
 [![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://www.javatpoint.com/what-is-vanilla-javascript)
 
-This is a web project focusing on sample e-commerce view built with **pure** **JavaScript** and **CSS** in NewMind AI Fullstack Bootcamp.
+This is a web project focusing on sample e-commerce view built with **pure** **JavaScript** and **CSS** as NewMind AI Fullstack Bootcamp task.
 
 Let's dive a little deeper together with keywords 🚀 You can fetch my project if you need these structures below ❤️
 
@@ -14,13 +14,11 @@ Products -> Dynamic review with pure CSS.
 
 Approaches -> Class building, asynchronous JavaScript, modals.
 
-▼ You can watch demo of project below ▼
-
-https://github.com/user-attachments/assets/efc0988b-4a94-4514-8b7b-ebf98bf60e36
 ________________________________________________________________________________________________________________________
 
+**You can watch demo of project below** 
 
-
+https://github.com/user-attachments/assets/efc0988b-4a94-4514-8b7b-ebf98bf60e36
 ________________________________________________________________________________________________________________________
 
 # :incoming_envelope: Contact Information :incoming_envelope:
