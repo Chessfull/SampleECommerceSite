@@ -1,0 +1,444 @@
+/* ▼ ********** General ********** ▼  */
+body {
+  background-color: white;
+  max-width: 96%;
+  overflow-x: hidden;
+  width: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ▼ ********** Navbar ********** ▼  */
+.navbar {
+  background-color: #ffa500;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 10px;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  color: blueviolet;
+}
+
+.navigations a {
+  margin-right: 20px;
+}
+
+.navbar a.active-link {
+  color: blueviolet;
+  font-weight: 520;
+}
+
+/* ▼ ********** Filter Area ********** ▼  */
+.container-filter-products {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  overflow: auto;
+}
+
+.filter-checkboxes {
+  margin: 20px 10px 5px 1px;
+  gap: 15px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 700px;
+  border: 2px solid #ffa500;
+  margin: 20px 15px 15px 15px;
+  background-color: antiquewhite;
+  font-size: 17px;
+}
+
+.filter-area h3 {
+  text-align: center;
+  margin: 0;
+}
+
+.fa.fa-star.checked {
+  color: #ffa500;
+}
+
+.fa.fa-star {
+  color: white;
+}
+
+/* ▼ ********** Product Cards ********** ▼  */
+.product-card-container {
+  display: grid;
+  grid-template-columns: repeat(
+    8,
+    1fr
+  ); /* For making card grid design 4 column in my scenario */
+  gap: 25px;
+  padding: 20px;
+  width: 95%;
+  margin: 0px 10px 10px 10px;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #cbcbcb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 300px;
+  min-width: 300px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 1); /* Making shadow more visible for feeling selected product */
+}
+
+.product-image {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.product-title {
+  font-size: 1.2em;
+  color: #171717;
+  margin-bottom: 10px;
+  height: 40px;
+  overflow: hidden; /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! check this later !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  text-overflow: ellipsis;
+  transition: height 0.3s ease;
+}
+
+.product-description {
+  font-size: 0.9em;
+  color: #494848;
+  margin-bottom: 15px;
+  height: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: height 0.3s ease;
+}
+
+.product-card:hover .product-title,
+.product-card:hover .product-description {
+  /* For making all text visible when hover especially for long texts */
+  height: auto;
+  overflow: visible;
+}
+
+.product-rating {
+  font-size: 1.1em;
+  color: #ffa500;
+}
+
+.product-price {
+  font-size: 1.1em;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.button-add-to-cart {
+  background-color: #28a745;
+  color: white;
+  font-size: 1.05em;
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-add-to-cart:hover {
+  background-color: #10b834;
+}
+
+.edit-delete-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+#edit-button {
+  background-color: #ffa500;
+  color: white;
+  font-size: 1.05em;
+  padding: 10px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#delete-button {
+  background-color: red;
+  color: white;
+  font-size: 1.05em;
+  padding: 10px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* ▼ ********** Shopping Cart ********** ▼  */
+#shopping-cart-icon {
+  color: blueviolet;
+  margin-right: 5px;
+}
+
+#shopping-cart {
+  color: blueviolet;
+  margin-right: 5px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.cart-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-details input {
+  width: 50%;
+}
+
+#cart-count{
+  display: none;
+  background-color: #10b834;
+  border-radius: 10px;
+  font-size: 25px;
+  padding: 3px;
+  color: #171717;
+  
+}
+
+/* ▼ ********** Modals ********** ▼  */
+.cart-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.cart-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  font-size: 20px;
+}
+
+.card-details {
+  display: flex;
+  align-items: center !important; /* !!!!!!!!!!!!! Check this later !!!!!!!!!!!!!!  */
+}
+
+.cart-button {
+  background-color: #28a745;
+  color: white;
+  font-size: 1.05em;
+  padding: 10px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 22%;
+}
+
+.edit-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  align-items: center;
+  gap: 5px;
+}
+
+.edit-modal-container {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+}
+
+.edit-form input {
+  width: 300px;
+  height: 20px;
+}
+
+#form-modal-save-button {
+  background-color: #28a745;
+  color: white;
+  font-size: 1.05em;
+  padding: 10px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#form-modal-image {
+  width: 50%;
+}
+
+.delete-button-modal {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-modal-container {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#delete-modal-yes {
+  background-color: red;
+  color: white;
+  font-size: 1.05em;
+  padding: 10px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#delete-modal-no {
+  background-color: #28a745;
+  color: white;
+  font-size: 1.05em;
+  padding: 10px;
+  width: 120px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ▼ ********** Loader ********** ▼  */
+.loader.active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  border: 20px solid #eaf0f6;
+  border-radius: 50%;
+  border-top: 20px solid #28a745;
+  width: 100px;
+  height: 100px;
+  animation: spinner 4s linear infinite;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ▼ ********** Responsive settings ********** ▼  */
+
+@media (max-width: 1500px) {
+  .product-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px;
+    width: 95%;
+    margin: 0px 10px 10px 10px;
+  }
+}
+
+
+@media (max-width: 1080px) {
+  .product-card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 20px;
+    width: 95%;
+    margin: 0px 10px 10px 10px;
+  }
+}
+
+

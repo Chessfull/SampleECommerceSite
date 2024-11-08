@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" defer src="userpage.js"></script>
+  </head>
+  <body>
+    <!-- ********* Navbar ********* -->
+    <div class="navbar">
+      <div class="navigations">
+        <a class="active-link" href="userpage.html">User Products</a>
+        <a href="adminpage.html">Admin Products</a>
+      </div>
+      <a id="shopping-cart" href=""
+        ><i id="shopping-cart-icon" class="fas fa-shopping-cart"></i>Your Cart
+        <span id="cart-count"></span>
+      </a>
+    </div>
+
+    <!-- Cart Modal for showing cart details -->
+    <div id="cartModal" class="cart-modal">
+      <div class="cart-modal-content">
+        <span class="close">&times;</span>
+        <h1>Your Cart</h1>
+        <div class="cart-details"></div>
+      </div>
+    </div>
+
+    <!-- ********* Filter area ********* -->
+    <div class="container-filter-products">
+      <aside class="filter-area">
+        <h2 style="text-align: center">Filters</h2>
+
+        <!-- ********* Category Filter Area ********* -->
+        <div class="filter-checkboxes category"></div>
+
+        <div class="filter-checkboxes rating-range">
+          <!-- ********* Rating Stars ********* -->
+          <h3>Rating</h3>
+          <div class="rating-stars">
+            <input id="five-star" type="checkbox" class="rating-checkbox" />
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <div class="rating-stars">
+            <input id="four-star" type="checkbox" class="rating-checkbox" />
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="rating-stars">
+            <input id="three-star" type="checkbox" class="rating-checkbox" />
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="rating-stars">
+            <input id="two-star" type="checkbox" class="rating-checkbox" />
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="rating-stars">
+            <input id="one-star" type="checkbox" class="rating-checkbox" />
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+        <div class="filter-checkboxes price-range">
+          <h3>Price</h3>
+          <span id="slider-price-value"></span>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value=""
+            class="slider"
+            id="priceRange"
+          />
+        </div>
+      </aside>
+
+      <!-- ********* Product Cards ********* -->
+      <section class="product-card-container"></section>
+    </div>
+
+    <!-- ********* Loader ********* -->
+    <div class="loader"></div>
+  </body>
+</html>

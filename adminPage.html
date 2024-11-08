@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" defer src="adminpage.js"></script>
+  </head>
+  <body>
+    
+    <!-- ********* Navbar ********* -->
+    <div class="navbar">
+      <div class="navigations">
+        <a href="userpage.html">User Products</a>
+        <a class="active-link" href="adminpage.html">Admin Products</a>
+      </div>
+    </div>
+
+    <!-- Delete and Edit Modal -->
+     <div class="edit-modal">
+        <div class="edit-modal-container">
+        <span class="close">&times;</span>
+        <form class="edit-form" action="">
+            <img id="form-modal-image" src="" alt="">
+            <label for="">Product Title</label>
+            <input value="" type="text" name="" id="form-modal-title"> 
+            <label for="">Product Description</label>
+            <input value="" type="text" name="" id="form-modal-description"> 
+            <label for="">Rating</label>
+            <input value="" type="text" name="" id="form-modal-rating">
+            <label for="">Price</label>            
+            <input value="" type="text" name="" id="form-modal-price"> 
+            <button id="form-modal-save-button" type="submit">Save</button>
+        </form>
+        </div>
+     </div>
+
+     <div class="delete-modal">
+
+     </div>
+
+    <div class="container-filter-products">
+      <!-- ********* Filter area ********* -->
+      <aside class="filter-area">
+        <h2 style="text-align: center">Filters</h2>
+
+        <!-- ********* Category Filter Area ********* -->
+        <div class="filter-checkboxes category"></div>
+
+        <div class="filter-checkboxes rating-range">
+          <!-- ********* Rating Stars ********* -->
+          <h3>Rating</h3>
+          <div class="rating-stars">
+            <input id="five-star" type="checkbox" class="rating-checkbox" />
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <div class="rating-stars">
+            <input id="four-star" type="checkbox" class="rating-checkbox" />
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="rating-stars">
+            <input id="three-star" type="checkbox" class="rating-checkbox" />
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="rating-stars">
+            <input id="two-star" type="checkbox" class="rating-checkbox" />
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="rating-stars">
+            <input id="one-star" type="checkbox" class="rating-checkbox" />
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+        <div class="filter-checkboxes price-range">
+          <h3>Price</h3>
+          <span id="slider-price-value"></span>
+          <input type="range" min="1" max="100" value="" class="slider" id="priceRange"/>
+        </div>
+      </aside>
+
+      <!-- ********* Product Cards ********* -->
+      <section class="product-card-container"></section>
+    </div>
+
+    <!-- ********* Loader ********* -->
+    <div class="loader"></div>
+
+    <div class="delete-button-modal">
+        <div class="delete-modal-container">
+            <p>Are you sure about this? </p>
+        <input id="delete-modal-yes" type="button" value="Yes">
+        <input id="delete-modal-no" type="button" value="No">
+    </div>
+    </div>
+
+    
+
+  </body>
+</html>
