@@ -4,7 +4,7 @@
 
 This is a web project focusing on sample e-commerce view built with **pure** **JavaScript** and **CSS**.
 
-Let's dive a little deeper together with keywords 🚀
+Let's dive a little deeper together with keywords 🚀 You can fetch my project if you need these structures below ❤️
 
 User part -> Users can filter products, adding products to cart and then able to view cart products and counts as modal.
 
@@ -12,11 +12,15 @@ Admin part -> Admins can edit or delete products through pop-up modals.
 
 Products -> Dynamic review with pure CSS.
 
-Approaches -> Class building, asynchronous JavaScript, action events.
+Approaches -> Class building, asynchronous JavaScript, modals.
 
 ▼ You can watch demo of project below ▼
 
-https://github.com/user-attachments/assets/9a8db204-f308-4eeb-b7d0-1455ca03e8a2
+https://github.com/user-attachments/assets/efc0988b-4a94-4514-8b7b-ebf98bf60e36
+________________________________________________________________________________________________________________________
+
+
+
 ________________________________________________________________________________________________________________________
 
 # :incoming_envelope: Contact Information :incoming_envelope:
