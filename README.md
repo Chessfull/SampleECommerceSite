@@ -2,7 +2,7 @@
 
 [![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://www.javatpoint.com/what-is-vanilla-javascript)
 
-This is a web project focusing on sample e-commerce view built with **pure** **JavaScript** and **CSS**.
+This is a web project focusing on sample e-commerce view built with **pure** **JavaScript** and **CSS** in NewMind AI Fullstack Bootcamp.
 
 Let's dive a little deeper together with keywords 🚀 You can fetch my project if you need these structures below ❤️
 
