@@ -4,6 +4,8 @@
 
 This is a web project focusing on sample e-commerce view built with **pure** **JavaScript** and **CSS** as NewMind AI Fullstack Bootcamp task.
 
+You can find a version of built with **React** [here](https://github.com/Chessfull/ECommerceSite).
+
 Let's dive a little deeper together with keywords 🚀 You can fetch my project if you need these structures below ❤️
 
 User part -> Users can filter products, adding products to cart and then able to view cart products and counts as modal.
